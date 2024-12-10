@@ -1,0 +1,15 @@
+{
+    "functions": {
+      "public/index.php": {
+        "runtime": "vercel-php@0.6.0"
+      }
+    },
+    "routes": [
+      { "src": "/(.*)",  "dest": "/public/index.php" },
+      { "src": "/public/css/output.css", "dest": "/public/css/output.css" },
+      { "src": "/public/css/styleguide.css", "dest": "/public/css/styleguide.css" },
+      { "src": "/public/img/Backgron.png", "dest": "/public/img/styleguide" },
+      { "src": "/public/src/input.css", "dest": "/public//src/input.css" },
+      { "src": "/public/img/Backgron.png", "dest": "/public/img/Backgron.png" }
+    ]
+  }
