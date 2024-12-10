@@ -22,7 +22,8 @@
 
 
     <!-- button confirm -->
-    <button class="w-80 bg-teal-500 text-white font-semibold py-2 rounded-md hover:bg-teal-600 focus:ring-2 focus:ring-teal-400">Continue</button>
+    <button onclick="window.location.href='index.php'"
+    class="w-80 bg-teal-500 text-white font-semibold py-2 rounded-md hover:bg-teal-600 focus:ring-2 focus:ring-teal-400">Continue</button>
   </div>
 
 </body>

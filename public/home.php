@@ -1,11 +1,11 @@
-<!-- <?php 
+<?php 
    session_start();
 
    include("php/config.php");
    if(!isset($_SESSION['valid'])){
     header("Location: index.php");
    }
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +26,7 @@
 
         <!-- Profile Link -->
         <div>
-            <!-- <?php 
+            <?php 
             $id = $_SESSION['id'];
             $query = mysqli_query($con,"SELECT * FROM users WHERE Id=$id");
 
@@ -37,7 +37,7 @@
                 $res_id = $result['Id'];
             }
             echo "<a href='edit.php?Id=$res_id' class='text-sm font-medium text-teal-500 hover:underline'>Change Profile</a>";
-            ?> -->
+            ?>
         </div>
     </div>
 

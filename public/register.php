@@ -21,6 +21,32 @@
             Create an Account
         </header>
 
+        <?php 
+        include("php/config.php");
+        if (isset($_POST['submit'])) {
+            $username = $_POST['username'];
+            $email = $_POST['email'];
+            $age = $_POST['age'];
+            $password = $_POST['password'];
+
+            // Verifying the unique email
+            $verify_query = mysqli_query($con, "SELECT Email FROM users WHERE Email='$email'");
+
+            if (mysqli_num_rows($verify_query) != 0) {
+                echo "<div class='text-red-500 text-center mb-4'>
+                          <p>This email is already in use. Try another one!</p>
+                      </div>";
+            } else {
+                mysqli_query($con, "INSERT INTO users(Username, Email, Age, Password) VALUES('$username', '$email', '$age', '$password')")
+                or die("Error Occurred");
+
+                header("Location: verif.php");
+
+                exit;
+            }
+        } else {
+        ?>
+
         <!-- Registration Form -->
         <form action="" method="post">
             <!-- Username Field -->
@@ -67,7 +93,7 @@
             <!-- Links -->
             <div class="text-center text-sm text-gray-600">
                 Already a member? 
-                <a href="index.htm" class="text-teal-600 font-medium hover:underline hover:font-bold">Sign In</a>
+                <a href="index.php" class="text-teal-600 font-medium hover:underline hover:font-bold">Sign In</a>
             </div>
 
             <!-- Footer -->
@@ -79,5 +105,6 @@
             </div>
         </form>
     </div>
+    <?php } ?>
 </body>
 </html>

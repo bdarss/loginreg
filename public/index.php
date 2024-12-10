@@ -1,6 +1,6 @@
-<!-- <?php 
+<?php 
    session_start();
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +18,7 @@
 
     <!-- Login Form -->
     <div class="bg-white rounded-3xl shadow-lg p-8 w-full max-w-sm">
-        <!-- <?php 
+        <?php 
         include("php/config.php");
         if (isset($_POST['submit'])) {
             $email = mysqli_real_escape_string($con, $_POST['email']);
@@ -40,7 +40,7 @@
                 exit;
             }
         } else {
-        ?> -->
+        ?>
         <header class="text-2xl font-bold text-center mb-6" style="color: var(--ijo);">Sign In</header>
         <form action="" method="post">
             <div class="mb-4">
@@ -56,10 +56,10 @@
             </div>
 
             <div class="text-center">
-                <a href="register.htm" class="text-xs font-medium text-teal-600 hover:underline hover:font-bold">New to Bentala?</a>
+                <a href="register.php" class="text-xs font-medium text-teal-600 hover:underline hover:font-bold">New to Bentala?</a>
             </div>
         </form>
-        <!-- <?php } ?> -->
+        <?php } ?>
     </div>
 </body>
 </html>
